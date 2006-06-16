@@ -1,0 +1,284 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/Makefile.am libvisual-plugins-0.4.0/Makefile.am
+--- libvisual-plugins-0.4.0-orig/Makefile.am	2006-02-23 09:25:05.000000000 -0600
++++ libvisual-plugins-0.4.0/Makefile.am	2006-04-27 17:43:14.906250000 -0500
+@@ -2,6 +2,8 @@
+ 
+ SUBDIRS = plugins po
+ 
++ACLOCAL_AMFLAGS = -I m4
++
+ EXTRA_DIST = libvisual-plugins.spec gettext.h po/Makevars.in
+ 
+ CLEANFILES = po/Makevars
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/G-Force/Makefile.am libvisual-plugins-0.4.0/plugins/actor/G-Force/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/G-Force/Makefile.am	2006-02-23 04:42:50.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/G-Force/Makefile.am	2006-04-27 17:39:09.656250000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir)
+ 
+-actor_gforce_la_LDFLAGS = -module -avoid-version
++actor_gforce_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_gforce_la_SOURCES = null.cpp
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/G-Force/unix/libvisual/Makefile.am libvisual-plugins-0.4.0/plugins/actor/G-Force/unix/libvisual/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/G-Force/unix/libvisual/Makefile.am	2006-03-08 07:06:58.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/G-Force/unix/libvisual/Makefile.am	2006-04-27 17:39:20.390625000 -0500
+@@ -19,6 +19,6 @@
+ 	-I$(GFORCE_TOP_SRCDIR)/unix/libmfl \
+ 	-I$(top_srcdir)
+ 
+-libactor_gforce_la_LDFLAGS = -module -avoid-version
++libactor_gforce_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ libactor_gforce_la_SOURCES = actor_gforce.cpp
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/JESS/Makefile.am libvisual-plugins-0.4.0/plugins/actor/JESS/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/JESS/Makefile.am	2006-02-23 03:03:24.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/JESS/Makefile.am	2006-04-27 18:20:29.671875000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-actor_JESS_la_LDFLAGS = -module -avoid-version
++actor_JESS_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_JESS_la_SOURCES = analyser.c analyser.h analyser_struct.h\
+ 			distorsion.c distorsion.h\
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/bumpscope/Makefile.am libvisual-plugins-0.4.0/plugins/actor/bumpscope/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/bumpscope/Makefile.am	2006-02-23 03:03:24.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/bumpscope/Makefile.am	2006-04-27 17:38:21.703125000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-actor_bumpscope_la_LDFLAGS = -module -avoid-version 
++actor_bumpscope_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_bumpscope_la_SOURCES = actor_bumpscope.c \
+ 			  actor_bumpscope.h \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/corona/Makefile.am libvisual-plugins-0.4.0/plugins/actor/corona/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/corona/Makefile.am	2006-02-23 03:03:24.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/corona/Makefile.am	2006-04-27 17:38:26.109375000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir)
+ 
+-actor_corona_la_LDFLAGS = -module -avoid-version
++actor_corona_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_corona_la_SOURCES = actor_corona.cpp \
+ 			  autopal.h \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/gdkpixbuf/Makefile.am libvisual-plugins-0.4.0/plugins/actor/gdkpixbuf/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/gdkpixbuf/Makefile.am	2006-02-23 07:34:48.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/gdkpixbuf/Makefile.am	2006-04-27 17:39:27.390625000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-actor_gdkpixbuf_la_LDFLAGS = -module -avoid-version 
++actor_gdkpixbuf_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_gdkpixbuf_la_SOURCES = actor_gdkpixbuf.c
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/gstreamer/Makefile.am libvisual-plugins-0.4.0/plugins/actor/gstreamer/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/gstreamer/Makefile.am	2006-02-23 03:03:27.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/gstreamer/Makefile.am	2006-04-27 17:39:33.234375000 -0500
+@@ -9,7 +9,7 @@
+ INCLUDES = $(all_includes) \
+ 	-I$(top_srcdir) 
+ 
+-actor_gstreamer_la_LDFLAGS = -module -avoid-version 
++actor_gstreamer_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_gstreamer_la_SOURCES = actor_gstreamer.c
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/infinite/Makefile.am libvisual-plugins-0.4.0/plugins/actor/infinite/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/infinite/Makefile.am	2006-02-23 03:03:27.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/infinite/Makefile.am	2006-04-27 18:17:39.343750000 -0500
+@@ -2,13 +2,13 @@
+ 
+ actor_plugin_LTLIBRARIES = actor_infinite.la
+ 
+-LIBS += $(LIBVISUAL_LIBS)
++LIBS += $(LIBVISUAL_LIBS) $(LTLIBINTL)
+ 
+ AM_CFLAGS = $(LIBVISUAL_CFLAGS)
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-actor_infinite_la_LDFLAGS = -module -avoid-version 
++actor_infinite_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_infinite_la_SOURCES = compute.c compute.h \
+ 			    display.c display.h \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/jakdaw/Makefile.am libvisual-plugins-0.4.0/plugins/actor/jakdaw/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/jakdaw/Makefile.am	2006-02-23 03:03:28.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/jakdaw/Makefile.am	2006-04-27 17:39:45.703125000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-actor_jakdaw_la_LDFLAGS = -module -avoid-version 
++actor_jakdaw_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_jakdaw_la_SOURCES = actor_jakdaw.c \
+ 			  actor_jakdaw.h \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/lv_analyzer/Makefile.am libvisual-plugins-0.4.0/plugins/actor/lv_analyzer/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/lv_analyzer/Makefile.am	2006-02-23 03:03:28.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/lv_analyzer/Makefile.am	2006-04-27 17:39:54.171875000 -0500
+@@ -9,7 +9,7 @@
+ INCLUDES = $(all_includes) \
+ 	-I$(top_srcdir) 
+ 
+-actor_lv_analyzer_la_LDFLAGS = -module -avoid-version 
++actor_lv_analyzer_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_lv_analyzer_la_SOURCES = actor_lv_analyzer.c
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/lv_gltest/Makefile.am libvisual-plugins-0.4.0/plugins/actor/lv_gltest/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/lv_gltest/Makefile.am	2006-02-24 05:24:49.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/lv_gltest/Makefile.am	2006-04-27 17:52:18.968750000 -0500
+@@ -3,6 +3,6 @@
+ actor_plugin_LTLIBRARIES = actor_lv_gltest.la
+ 
+ actor_lv_gltest_la_CFLAGS = -I$(top_srcdir) $(LIBVISUAL_CFLAGS) $(X_CFLAGS)
+-actor_lv_gltest_la_LDFLAGS = -module -avoid-version 
+-actor_lv_gltest_la_LIBS = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL -lGLU 
++actor_lv_gltest_la_LDFLAGS = -module -avoid-version -no-undefined
++actor_lv_gltest_la_LIBADD = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL -lGLU $(LTLIBINTL)
+ actor_lv_gltest_la_SOURCES = actor_lv_gltest.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/lv_scope/Makefile.am libvisual-plugins-0.4.0/plugins/actor/lv_scope/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/lv_scope/Makefile.am	2006-02-23 03:03:29.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/lv_scope/Makefile.am	2006-04-27 17:40:03.062500000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-actor_lv_scope_la_LDFLAGS = -module -avoid-version 
++actor_lv_scope_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_lv_scope_la_SOURCES = actor_lv_scope.c
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/madspin/Makefile.am libvisual-plugins-0.4.0/plugins/actor/madspin/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/madspin/Makefile.am	2006-02-24 05:24:49.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/madspin/Makefile.am	2006-04-27 17:55:26.406250000 -0500
+@@ -9,6 +9,6 @@
+ actor_plugin_LTLIBRARIES = actor_madspin.la
+ 
+ actor_madspin_la_CFLAGS = -I$(top_srcdir) $(LIBVISUAL_CFLAGS) -DSTAR_DIR=\""$(imagesdir)/"\"
+-actor_madspin_la_LDFLAGS = -module -avoid-version 
+-actor_madspin_la_LIBS = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL 
++actor_madspin_la_LDFLAGS = -module -avoid-version -no-undefined
++actor_madspin_la_LIBADD = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL $(LTLIBINTL)
+ actor_madspin_la_SOURCES = madspin.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/nastyfft/Makefile.am libvisual-plugins-0.4.0/plugins/actor/nastyfft/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/nastyfft/Makefile.am	2006-02-24 05:24:50.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/nastyfft/Makefile.am	2006-04-27 17:53:51.390625000 -0500
+@@ -3,6 +3,6 @@
+ actor_plugin_LTLIBRARIES = actor_nastyfft.la
+ 
+ actor_nastyfft_la_CFLAGS = -I$(top_srcdir) $(LIBVISUAL_CFLAGS) $(X_CFLAGS)
+-actor_nastyfft_la_LDFLAGS = -module -avoid-version 
+-actor_nastyfft_la_LIBS = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL -lGLU
++actor_nastyfft_la_LDFLAGS = -module -avoid-version -no-undefined
++actor_nastyfft_la_LIBADD = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL -lGLU
+ actor_nastyfft_la_SOURCES = actor_nastyfft.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/oinksie/Makefile.am libvisual-plugins-0.4.0/plugins/actor/oinksie/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/oinksie/Makefile.am	2006-02-23 03:03:31.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/oinksie/Makefile.am	2006-04-27 17:40:14.875000000 -0500
+@@ -8,7 +8,7 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-actor_oinksie_la_LDFLAGS = -module -avoid-version 
++actor_oinksie_la_LDFLAGS = -module -avoid-version -no-undefined
+ 
+ actor_oinksie_la_SOURCES = actor_oinksie.c\
+ 			   oinksie.c oinksie.h\
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/actor/pseudotoad_flower/Makefile.am libvisual-plugins-0.4.0/plugins/actor/pseudotoad_flower/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/actor/pseudotoad_flower/Makefile.am	2006-03-08 07:06:58.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/actor/pseudotoad_flower/Makefile.am	2006-04-27 17:57:03.921875000 -0500
+@@ -2,9 +2,9 @@
+ 
+ actor_plugin_LTLIBRARIES = actor_flower.la
+ 
+-actor_flower_la_LDFLAGS = -module -avoid-version 
++actor_flower_la_LDFLAGS = -module -avoid-version -no-undefined
+ actor_flower_la_CFLAGS = -I$(top_srcdir) $(LIBVISUAL_CFLAGS) $(X_CFLAGS)
+-actor_flower_la_LIBS = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL -lGLU 
++actor_flower_la_LIBADD = $(LIBVISUAL_LIBS) $(X_LIBS) -lGL -lGLU $(LTLIBINTL)
+ 
+ actor_flower_la_SOURCES = \
+ 	actor_flower.c \
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/input/debug/Makefile.am libvisual-plugins-0.4.0/plugins/input/debug/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/input/debug/Makefile.am	2006-02-23 03:03:36.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/input/debug/Makefile.am	2006-04-27 17:40:31.875000000 -0500
+@@ -8,5 +8,5 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) -I$(top_builddir)
+ 
+-input_debug_la_LDFLAGS = -module -avoid-version 
++input_debug_la_LDFLAGS = -module -avoid-version -no-undefined
+ input_debug_la_SOURCES = input_debug.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/input/esd/Makefile.am libvisual-plugins-0.4.0/plugins/input/esd/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/input/esd/Makefile.am	2006-02-23 03:03:37.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/input/esd/Makefile.am	2006-04-27 17:40:35.296875000 -0500
+@@ -8,5 +8,5 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir)
+ 
+-input_esd_la_LDFLAGS = -module -avoid-version 
++input_esd_la_LDFLAGS = -module -avoid-version -no-undefined
+ input_esd_la_SOURCES = input_esd.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/input/mplayer/Makefile.am libvisual-plugins-0.4.0/plugins/input/mplayer/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/input/mplayer/Makefile.am	2006-02-23 03:03:38.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/input/mplayer/Makefile.am	2006-04-27 18:49:45.093750000 -0500
+@@ -8,6 +8,6 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-input_mplayer_la_LDFLAGS = -module -avoid-version 
++input_mplayer_la_LDFLAGS = -module -avoid-version -no-undefined
+ input_mplayer_la_SOURCES = input_mplayer.c
+ 
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/morph/alphablend/Makefile.am libvisual-plugins-0.4.0/plugins/morph/alphablend/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/morph/alphablend/Makefile.am	2006-02-23 03:03:38.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/morph/alphablend/Makefile.am	2006-04-27 17:40:48.109375000 -0500
+@@ -8,5 +8,5 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-morph_alphablend_la_LDFLAGS = -module -avoid-version 
++morph_alphablend_la_LDFLAGS = -module -avoid-version -no-undefined
+ morph_alphablend_la_SOURCES = morph_alphablend.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/morph/flash/Makefile.am libvisual-plugins-0.4.0/plugins/morph/flash/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/morph/flash/Makefile.am	2006-02-23 03:03:39.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/morph/flash/Makefile.am	2006-04-27 17:40:51.812500000 -0500
+@@ -8,5 +8,5 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-morph_flash_la_LDFLAGS = -module -avoid-version 
++morph_flash_la_LDFLAGS = -module -avoid-version -no-undefined
+ morph_flash_la_SOURCES = morph_flash.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/morph/slide/Makefile.am libvisual-plugins-0.4.0/plugins/morph/slide/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/morph/slide/Makefile.am	2006-02-23 03:03:39.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/morph/slide/Makefile.am	2006-04-27 17:40:56.406250000 -0500
+@@ -8,5 +8,5 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-morph_slide_la_LDFLAGS = -module -avoid-version 
++morph_slide_la_LDFLAGS = -module -avoid-version -no-undefined
+ morph_slide_la_SOURCES = morph_slide.c
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x 'Makefile.in*' -x configure -x m4 libvisual-plugins-0.4.0-orig/plugins/morph/tentacle/Makefile.am libvisual-plugins-0.4.0/plugins/morph/tentacle/Makefile.am
+--- libvisual-plugins-0.4.0-orig/plugins/morph/tentacle/Makefile.am	2006-02-23 03:03:39.000000000 -0600
++++ libvisual-plugins-0.4.0/plugins/morph/tentacle/Makefile.am	2006-04-27 17:40:59.703125000 -0500
+@@ -8,5 +8,5 @@
+ 
+ INCLUDES = $(all_includes) -I$(top_srcdir) 
+ 
+-morph_tentacle_la_LDFLAGS = -module -avoid-version 
++morph_tentacle_la_LDFLAGS = -module -avoid-version -no-undefined
+ morph_tentacle_la_SOURCES = morph_tentacle.c

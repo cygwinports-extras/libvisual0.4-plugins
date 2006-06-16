@@ -1,0 +1,9 @@
+ORIG_PN=libvisual-plugins
+
+DESCRIPTION="Audio visualization library plugins"
+HOMEPAGE="http://localhost.nl/~synap/libvisual/"
+SRC_URI="http://easynews.dl.sourceforge.net/libvisual/${ORIG_PN}-${PV}.tar.bz2"
+
+CYGCONF_ARGS='--disable-static --enable-extra-optimization --disable-mplayer'
+
+DIFF_EXCLUDES='m4'

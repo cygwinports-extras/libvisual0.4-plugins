@@ -1,0 +1,4 @@
+category: Audio
+requires: cygwin gtk2-x11 libGL1 libGLU1 libesound0 libintl3 libvisual04
+sdesc: "Libvisual Visualization and Input plugins"
+ldesc: "Libvisual Visualization and Input plugins"
