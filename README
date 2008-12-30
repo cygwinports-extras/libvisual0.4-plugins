@@ -1,4 +1,4 @@
-libvisual04-plugins
+libvisual0.4-plugins
 ------------------------------------------
 Libvisual is a library that acts as a middle layer between
 applications that want audio visualisation and audio visualisation
@@ -13,26 +13,28 @@ to: ascii art, sdl, on gl object as a surface, alpha blended
 or just, anywhere.
 
 Runtime requirements:
-  cygwin-1.5.19-4
-  gtk2-x11-2.8.17-1
-  libGL1-6.4.2-1
-  libGLU1-6.4.2-1
-  libesound0-0.2.36-1
-  libintl3-0.14.5-1
-  libvisual04-0.4.0-1
+  cygwin-1.5.25-15
+  libesd0-0.2.41-1
+  libgdk_pixbuf2.0_0-2.14.6-1
+  libGL1-7.2-2
+  libglib2.0_0-2.18.3-1
+  libGLU1-7.2-2
+  libintl8-0.17-2
+  libjack0-0.109.2-1
+  libvisual0.4_0-0.4.0-1
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.19-4
-  autoconf2.5-2.59-3
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  cygport-0.1.90-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  libtool1.5-1.5.20-2
-  make-3.80-1
-  sed-4.1.4-1
+  autoconf2.5-2.63-1
+  automake1.9-1.9.6-3
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
+  gcc-core-3.4.4-3
+  libtool-2.2.6a-1
+  make-3.81-1
+  pkg-config-0.23a-2
+  sed-4.1.5-2
 
 Canonical website:
   http://localhost.nl/~synap/libvisual/
@@ -43,15 +45,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack libvisual04-plugins-0.4.0-X-src.tar.bz2
+  unpack libvisual0.4-plugins-0.4.0-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./libvisual04-plugins-0.4.0-X.cygport all
+  cygport ./libvisual0.4-plugins-0.4.0-X.cygport all
 
 This will create:
-  /usr/src/libvisual04-plugins-0.4.0-X-src.tar.bz2
-  /usr/src/libvisual04-plugins-0.4.0-X.tar.bz2
+  /usr/src/libvisual0.4-plugins-0.4.0-X-src.tar.bz2
+  /usr/src/libvisual0.4-plugins-0.4.0-X.tar.bz2
 
 -------------------------------------------
 
@@ -73,6 +75,8 @@ Files included in the binary package:
   /usr/lib/libvisual-0.4/actor/actor_infinite.la
   /usr/lib/libvisual-0.4/actor/actor_jakdaw.dll
   /usr/lib/libvisual-0.4/actor/actor_jakdaw.la
+  /usr/lib/libvisual-0.4/actor/actor_lv_analyzer.dll
+  /usr/lib/libvisual-0.4/actor/actor_lv_analyzer.la
   /usr/lib/libvisual-0.4/actor/actor_lv_gltest.dll
   /usr/lib/libvisual-0.4/actor/actor_lv_gltest.la
   /usr/lib/libvisual-0.4/actor/actor_lv_scope.dll
@@ -85,6 +89,8 @@ Files included in the binary package:
   /usr/lib/libvisual-0.4/actor/actor_oinksie.la
   /usr/lib/libvisual-0.4/input/input_esd.dll
   /usr/lib/libvisual-0.4/input/input_esd.la
+  /usr/lib/libvisual-0.4/input/input_jack.dll
+  /usr/lib/libvisual-0.4/input/input_jack.la
   /usr/lib/libvisual-0.4/morph/morph_alphablend.dll
   /usr/lib/libvisual-0.4/morph/morph_alphablend.la
   /usr/lib/libvisual-0.4/morph/morph_flash.dll
@@ -93,15 +99,14 @@ Files included in the binary package:
   /usr/lib/libvisual-0.4/morph/morph_slide.la
   /usr/lib/libvisual-0.4/morph/morph_tentacle.dll
   /usr/lib/libvisual-0.4/morph/morph_tentacle.la
-  /usr/share/doc/Cygwin/libvisual04-plugins-0.4.0.README
-  /usr/share/doc/libvisual04-plugins-0.4.0/ABOUT-NLS
-  /usr/share/doc/libvisual04-plugins-0.4.0/AUTHORS
-  /usr/share/doc/libvisual04-plugins-0.4.0/COPYING
-  /usr/share/doc/libvisual04-plugins-0.4.0/ChangeLog
-  /usr/share/doc/libvisual04-plugins-0.4.0/INSTALL
-  /usr/share/doc/libvisual04-plugins-0.4.0/NEWS
-  /usr/share/doc/libvisual04-plugins-0.4.0/README
-  /usr/share/doc/libvisual04-plugins-0.4.0/TODO
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/ABOUT-NLS
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/AUTHORS
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/COPYING
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/ChangeLog
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/INSTALL
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/NEWS
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/README
+  /usr/share/doc/libvisual0.4-plugins-0.4.0/TODO
   /usr/share/libvisual-plugins-0.4/actor/actor_gforce/GForceColorMaps/Acid_Gap
   /usr/share/libvisual-plugins-0.4/actor/actor_gforce/GForceColorMaps/Acid_Gap_2
   /usr/share/libvisual-plugins-0.4/actor/actor_gforce/GForceColorMaps/Acid_Gap_5
@@ -359,6 +364,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.4.0-2 -----
+Rebuilt with Gentoo patches.
 
 ----- version 0.4.0-1 -----
 Initial release of 0.4 branch for Cygwin.

@@ -1,0 +1,37 @@
+ORIG_PN="libvisual-plugins"
+mirror_gentoo_patchsets="http://sources.gentoo.org/viewcvs.py/*checkout*/gentoo/src/patchsets"
+
+DESCRIPTION="Audio visualization library plugins"
+HOMEPAGE="http://localhost.nl/~synap/libvisual/"
+SRC_URI="mirror://sourceforge/libvisual/${ORIG_PN}-${PV}.tar.bz2"
+PATCH_URI="
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/005_all_cxxflags.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/010_all_LIBADD.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/020_all_64bit.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/030_all_analyser.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/040_all_gforce.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/050_all_automagic.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/060_all_gstreamer.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/070_all_gforce-fbsd.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/080_all_qa.patch
+	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/090_all_nastyfft.patch
+"
+
+DIFF_EXCLUDES='m4'
+
+CYGPORT_USE_UNSTABLE_API=1
+src_unpack_hook() {
+	# AC_PATH_ALSA
+	sed -e '1,/Paths for Alsa/d' aclocal.m4 > acinclude.m4
+}
+
+WANT_AUTOMAKE=1.9
+ACLOCAL_FLAGS="-I m4"
+# gstreamer == 0.8; mplayer requires mremap(2)
+CYGCONF_ARGS="
+	--disable-static
+	--disable-alsa
+	--disable-gstreamer-plugin
+	--disable-mplayer
+"
+MAKEOPTS+=" LDFLAGS=-no-undefined"
