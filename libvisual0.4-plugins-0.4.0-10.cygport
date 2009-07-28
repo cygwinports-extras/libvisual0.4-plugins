@@ -11,7 +11,6 @@ PATCH_URI="
 	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/030_all_analyser.patch
 	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/040_all_gforce.patch
 	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/050_all_automagic.patch
-	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/060_all_gstreamer.patch
 	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/070_all_gforce-fbsd.patch
 	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/080_all_qa.patch
 	mirror://gentoo_patchsets/${ORIG_PN}/${PV}/090_all_nastyfft.patch
@@ -32,6 +31,7 @@ CYGCONF_ARGS="
 	--disable-static
 	--disable-alsa
 	--disable-gstreamer-plugin
+	--disable-jack
 	--disable-mplayer
 "
 MAKEOPTS+=" LDFLAGS=-no-undefined"

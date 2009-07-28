@@ -1,4 +1,4 @@
 category: Audio
-requires: libesd0 libgdk_pixbuf2.0_0 libGL1 libglib2.0_0 libGLU1 libintl8 libjack0 libvisual0.4_0
+requires: libesd0 libgcc1 libgdk_pixbuf2.0_0 libGL1 libglib2.0_0 libGLU1 libintl8 libstdc++6 libvisual0.4_0
 sdesc: "Libvisual Visualization and Input plugins"
 ldesc: "Libvisual Visualization and Input plugins"
